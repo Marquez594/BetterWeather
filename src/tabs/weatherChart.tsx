@@ -34,7 +34,7 @@ export default function WeatherGraph({ data }: { data: TodayType }) {
   const hours = [
     ...data.days[0].hours,
     ...data.days[1].hours
-  ].slice(numberToHours[currentHour], numberToHours[currentHour] + 12)
+  ].slice(numberToHours[currentHour as keyof typeof numberToHours], numberToHours[currentHour as keyof typeof numberToHours] + 12)
 
   const graphDate = hours.map((hour) => ({
     datetime: new Date(`1970-01-01T${hour.datetime}`).toLocaleTimeString([], {

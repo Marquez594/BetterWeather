@@ -47,7 +47,7 @@ export default function TenDays({ data }: { data: dayType }) {
                   <td className="text-center">
                     <div className="flex items-center justify-center gap-2">
                       <FontAwesomeIcon
-                        icon={weatherIcons[date.icon]}
+                        icon={weatherIcons[date.icon as keyof typeof weatherIcons]}
                       ></FontAwesomeIcon>
                       <h2>{date.conditions}</h2>
                     </div>

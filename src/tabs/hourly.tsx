@@ -102,12 +102,12 @@ export default function Hourly({ data }: { data: HourlyType }) {
                     <td className="text-center py-5 font-bold">
                       {index == 0
                         ? "Now"
-                        : numberToHours[hour.datetime.slice(0, 2)]}
+                        : numberToHours[hour.datetime.slice(0, 2) as keyof typeof numberToHours]}
                     </td>
                     <td className="text-center">
                       <div className="flex gap-2 items-center justify-center">
                         <FontAwesomeIcon
-                          icon={weatherIcons[hour.icon]}
+                          icon={weatherIcons[hour.icon as keyof typeof weatherIcons]}
                           className="text-2xl"
                         ></FontAwesomeIcon>
                         <h2

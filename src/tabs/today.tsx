@@ -21,7 +21,7 @@ export default function Today({data}:{
             <h1 className="text-9xl">{data?.currentConditions?.temp.toFixed(0)}°</h1>
             <div className="flex flex-col items-center gap-2  h-full justify-center">
               <FontAwesomeIcon
-                icon={weatherIcons[data.currentConditions.icon]}
+                icon={weatherIcons[data.currentConditions.icon as keyof typeof weatherIcons]}
                 className="text-7xl"
               ></FontAwesomeIcon>
               <h1 >{data.currentConditions.conditions}</h1>

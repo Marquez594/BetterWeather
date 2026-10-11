@@ -96,3 +96,13 @@ export const weatherIcons = {
   fog: faSmog,
   wind: faWind,
 };
+
+export type WeatherContextType = {
+  location: string;
+  setLocation: React.Dispatch<React.SetStateAction<string>>;
+  tab: "Today" | "Hourly" | "10days";
+  setTab: React.Dispatch<
+    React.SetStateAction<"Today" | "Hourly" | "10days">
+  >;
+};
+
